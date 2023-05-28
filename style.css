@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -139,7 +140,6 @@ section#hero {
 section#main {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: pink;
 }
 
 /* container */
@@ -163,11 +163,13 @@ section#main {
 @media (min-width: 768px) {
   .sidebar > *:nth-child(1) {
     width: calc(100% / 3 * 2);
+    background-color: pink;
   }
   .sidebar > *:nth-child(2) {
     width: calc(100% / 3);
     position: sticky;
     top: 2rem;
+    background-color: gray;
   }
 }
 
