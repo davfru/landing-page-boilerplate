@@ -159,17 +159,121 @@ section#main {
   top: 2rem;
 }
 
+.right-block {
+  box-shadow: 0px 5px 15px 0px #e8e6e6;
+  padding: 0px 0px 30px 0px;
+  transition: all 0.6s;
+  background-color: #ffffff;
+  border-radius: 0px 0px 60px 0px;
+  position: relative;
+}
+
+.wrapper_right-img {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.inner-right_block {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.valid_block {
+  position: absolute;
+  right: -8px;
+  top: 57%;
+  margin-top: -20px;
+}
+
+.wrapper_right-img img {
+  width: 100%;
+}
+
+/* button */
+.btn-blue,
+.btn-blue:focus {
+  font-weight: 400;
+  transition: all 0.3s;
+  color: #ffffff;
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+  width: 100%;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 25px;
+}
+
+.pulse {
+  cursor: pointer;
+  box-shadow: 0px 5px 10px 0px #dddddd;
+  animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #f2441f;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 5px 5px #f2441f;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 0px #f2441f;
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0px 0px 0px 0px #f2441f;
+    box-shadow: 0px 0px 0px 0px #f2441f;
+  }
+  50% {
+    -moz-box-shadow: 0px 0px 5px 5px #f2441f;
+    box-shadow: 0px 0px 5px 5px #f2441f;
+  }
+  100% {
+    -moz-box-shadow: 0px 0px 0px 0px #f2441f;
+    box-shadow: 0px 0px 0px 0px #f2441f;
+  }
+}
+
+@media (max-width: 1200px) {
+  .valid_block {
+    top: 49%;
+  }
+}
 /* tablet breakpoint */
 @media (min-width: 768px) {
   .sidebar > *:nth-child(1) {
     width: calc(100% / 3 * 2);
-    background-color: pink;
   }
+
   .sidebar > *:nth-child(2) {
     width: calc(100% / 3);
     position: sticky;
     top: 2rem;
-    background-color: gray;
   }
 }
 
