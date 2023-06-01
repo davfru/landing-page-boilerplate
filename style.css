@@ -100,7 +100,7 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -112,34 +112,39 @@ div#bottom-offer {
 }
 
 /* navbar */
+
 nav.nav {
   display: flex;
-  justify-content: center;
-  height: 6rem;
   width: 100%;
-  position: relative;
+  border-bottom: 1px solid #2196f3;
+  justify-content: center;
 }
 
-.nav > .nav-links > a {
+.nav-links {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.nav-links > a {
   display: block;
   padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   text-decoration: none;
   color: black;
-}
-
-.nav > #nav-check {
-  display: none;
+  font-size: 1.5rem;
 }
 
 /* hero */
 section#hero {
   display: flex;
-  justify-content: center;
-  background-color: white;
+  justify-content: space-around;
+  flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-bottom-left-radius: 5rem;
-  box-shadow: 0px 0px 10px 0px #e8e6e6;
+  box-shadow: 0px 6px 8px 0px #e8e6e6;
+  background-image: url('./static/bg.png');
+  background-size: 'cover';
 }
 
 /* content */
@@ -305,28 +310,10 @@ div#sticky-div {
   margin: 2rem 0rem 5rem 0rem;
 }
 .testimonial-heading {
-  letter-spacing: 1px;
-  margin: 30px 0px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 2rem 0px 2rem 0rem;
+  text-align: center;
 }
-.testimonial-heading h1 {
-  font-size: 2.2rem;
-  font-weight: 500;
-  /* background-color: #202020; */
-  color: black;
-  padding: 10px 20px;
-}
-.testimonial-heading span {
-  font-size: 1.3rem;
-  color: #252525;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+
 .testimonial-box-container {
   display: flex;
   justify-content: center;
@@ -382,7 +369,7 @@ div#sticky-div {
   margin-bottom: 20px;
 }
 .client-comment p {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #4b4b4b;
 }
 .testimonial-box:hover {
@@ -399,9 +386,6 @@ div#sticky-div {
 @media (max-width: 790px) {
   .testimonial-box {
     width: 100%;
-  }
-  .testimonial-heading h1 {
-    font-size: 1.4rem;
   }
 }
 @media (max-width: 340px) {
@@ -563,9 +547,24 @@ img {
   margin-bottom: 25px;
 }
 
-.offer {
+.key_points {
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #ff0000;
+  margin-bottom: 3rem;
+}
+
+.media {
   display: flex;
   align-items: center;
+}
+
+.media > *:nth-child(1) {
+  padding-right: 1rem;
+}
+
+.offer {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
   color: #212121;
 }
@@ -626,8 +625,15 @@ img {
 }
 
 .right_text_offer {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
+}
+
+#info {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 /* media */
@@ -649,7 +655,7 @@ img {
   }
 
   .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
+  #nav-check:checked ~ .nav-btn > label {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
@@ -660,10 +666,8 @@ img {
     border-top: 2px solid black;
   }
 
-  .nav > .nav-links {
-    position: absolute;
+  .nav-links {
     display: block;
-    width: 100%;
     background-color: white;
     height: 0px;
     transition: all 0.3s ease-in;
@@ -672,16 +676,17 @@ img {
     left: 0px;
   }
 
-  .nav > #nav-check:checked ~ .nav-links {
-    min-height: 100vh;
+  #nav-check:checked ~ .nav-links {
+    height: auto;
     overflow-y: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .nav > .nav-links > a {
+  .nav-links > a {
     display: initial;
     width: 100%;
   }
@@ -702,7 +707,7 @@ img {
 
 /* desktop */
 @media (min-width: 992px) {
-  .nav > .nav-links > a {
+  .nav-links > a {
     display: initial;
     width: 100%;
   }
@@ -713,7 +718,7 @@ img {
   }
 
   section#main {
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 4rem 12rem 4rem 12rem;
   }
 
   .sidebar > *:nth-child(1) {
@@ -723,5 +728,9 @@ img {
   div#bottom-offer {
     display: block;
     margin-top: 5rem;
+  }
+
+  section#hero {
+    flex-direction: row;
   }
 }
