@@ -109,11 +109,23 @@ h2 {
 
 /* navbar */
 
+.logo {
+  padding: 1rem;
+}
+
+.logo > div {
+  background-image: url('./static/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2rem;
+  background-position: center;
+}
+
 nav.nav {
   display: flex;
-  width: 100%;
-  border-bottom: 1px solid #2196f3;
+  border-bottom: 1px solid #f44336;
   justify-content: center;
+  flex-direction: column;
 }
 
 .nav-links {
@@ -226,7 +238,7 @@ div#sticky-div {
   display: inline-block;
   padding: 12px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.42857143;
   text-align: center;
@@ -384,7 +396,7 @@ div#sticky-div {
 @media (max-width: 1060px) {
   .testimonial-box {
     width: 45%;
-    padding: 10px;
+    padding: 1rem;
   }
 }
 
@@ -425,7 +437,7 @@ div#sticky-div {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #f3f3f3;
 }
 
@@ -453,7 +465,7 @@ div#sticky-div {
   color: #212121;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 14px;
+  font-size: 1rem;
 
   font-weight: 500;
 }
@@ -477,7 +489,7 @@ div#sticky-div {
 .copyright {
   padding: 22px 0px 17px;
 
-  font-size: 14px;
+  font-size: 1rem;
   color: #212121;
 }
 
