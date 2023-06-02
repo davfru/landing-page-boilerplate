@@ -319,6 +319,7 @@ div#sticky-div {
   width: 100%;
   margin: 0rem 0rem 5rem 0rem;
 }
+
 .testimonial-heading {
   margin: 2rem 0px 2rem 0rem;
   text-align: center;
@@ -663,6 +664,10 @@ div#sticky-div {
     top: 0px;
   }
 
+  .logo {
+    width: 15rem;
+  }
+
   .nav > .nav-btn > label {
     display: block;
     width: 3rem;
@@ -767,5 +772,11 @@ div#sticky-div {
     border-left: 1px solid #f5f3fb;
     border-top: 0px;
     border-bottom: 0px;
+  }
+
+  footer {
+    .logo {
+      width: 15rem;
+    }
   }
 }
