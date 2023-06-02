@@ -54,7 +54,7 @@
       <div class="sidebar">
         <div>
           <div class="key_points">
-            <h2 class="">Key Points</h2>
+            <h1 class="">Key Points</h1>
             <div class="media">
               <div>
                 <img class="arrow" src="./static/arrow.png" />
@@ -181,7 +181,7 @@
             </div>
           </div>
 
-          <div class="client-comment">
+          <div class="">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, quaerat quis? Provident temporibus architecto
@@ -214,7 +214,7 @@
             </div>
           </div>
 
-          <div class="client-comment">
+          <div class="">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, quaerat quis? Provident temporibus architecto
@@ -262,7 +262,13 @@
         </div>
       </div>
       <div class="bottom_footer">
-        <div class="copyright">Copyright © 2012 - 2023</div>
+        <div class="copyright">
+          Copyright © <span id="year"></span>
+          <script>
+            document.getElementById('year').innerHTML =
+              new Date().getFullYear();
+          </script>
+        </div>
       </div>
       <div id="info">
         Le informazioni in questa landing page (advertorial) sono a scopo
