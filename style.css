@@ -92,7 +92,9 @@
   font-family: 'Outfit-Bold', sans-serif;
 }
 
-p, li, a {
+p,
+li,
+a {
   font-family: 'Outfit-Regular', sans-serif;
 }
 
@@ -104,8 +106,13 @@ a {
   font-size: 1rem;
 }
 
-p {
-  font-size: 1.2rem;
+p,
+li {
+  font-size: 2.2rem;
+}
+
+.title {
+  font-size: 4rem !important;
 }
 
 h1 {
@@ -113,7 +120,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 2.5rem;
 }
 
 .bold {
@@ -122,6 +129,18 @@ h2 {
 
 .pink {
   color: #ffbaba;
+}
+
+.gray {
+  color: gray;
+}
+
+.center {
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 3rem;
 }
 
 /* navbar */
@@ -140,8 +159,10 @@ h2 {
 
 nav.nav {
   display: flex;
-  border-bottom: 1px solid #ffbaba;
   justify-content: center;
+  display: block;
+  width: 2.3rem;
+  height: 0.8rem;
   flex-direction: column;
 }
 
@@ -149,6 +170,8 @@ nav.nav {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .nav-links > a {
@@ -161,12 +184,11 @@ nav.nav {
 
 /* accordion */
 .accordion {
-  background-color: #eee;
+  background-color: #ffbaba;
   border-radius: 40px;
-  color: #444;
+  color: white;
   cursor: pointer;
-  padding: 5px;
-  margin: 1px;
+  margin: 2px;
   width: 100%;
   border: none;
   text-align: left;
@@ -175,8 +197,9 @@ nav.nav {
   text-align: center;
 }
 
-.active, .accordion:hover {
-  background-color: #ccc; 
+.active,
+.accordion:hover {
+  /*background-color: #ccc;*/
 }
 
 .panel {
@@ -195,9 +218,19 @@ section#hero {
   padding-bottom: 30rem;
   border-bottom-left-radius: 5rem;
   box-shadow: 0px 6px 8px 0px #e8e6e6;
-  background-image: url('https://images.clickfunnels.com/a7/fbd40452f54209be48e6094da357aa/banner_desktop.png');
+  background-image: url('https://images.clickfunnels.com/35/9e69189f2e4787966caa8cb3a95f7e/bundle-banner-mobile.png');
   background-size: cover;
   color: white;
+  padding-bottom: 35rem;
+}
+
+section#hero div {
+  margin: 2rem;
+}
+
+section#hero div * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* content */
@@ -279,11 +312,21 @@ div#sticky-div {
   font-weight: 600;
 }
 
+.btn-pink {
+  font-weight: 400;
+  transition: all 0.3s;
+  color: #ffffff;
+  background-color: #ffbaba;
+  border: 1px solid #ffbaba;
+  width: 100%;
+  font-weight: 600;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 12px;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.42857143;
   text-align: center;
@@ -300,6 +343,8 @@ div#sticky-div {
   border: 1px solid transparent;
   border-radius: 25px;
 }
+
+/* pulse red */
 
 .pulse {
   cursor: pointer;
@@ -346,6 +391,10 @@ div#sticky-div {
 
   .sidebar > *:nth-child(2) {
     width: calc(100% / 3);
+  }
+
+  section#hero {
+    padding-bottom: 70rem;
   }
 }
 
@@ -522,11 +571,11 @@ div#sticky-div {
 
 .ultra_boost {
   background-image: url('https://images.clickfunnels.com/2a/6859ca446f4ef68c006126fb4101a6/bundle_offer_v2.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 60px 0px 0px 0px;
-  padding: 10rem;
-  margin-bottom: 25px;
+  padding: 11.5rem;
+  margin-bottom: 2rem;
 }
 
 .ultra_boost_title {
@@ -588,6 +637,7 @@ div#sticky-div {
 
 .big-price {
   font-size: 3rem;
+  color: green;
 }
 
 .line-through {
@@ -655,6 +705,7 @@ div#sticky-div {
     width: 3rem;
     height: 3rem;
     padding: 1rem;
+    margin-right: 1rem;
   }
 
   .sidebar > *:nth-child(2) {
@@ -663,13 +714,13 @@ div#sticky-div {
 
   .nav > .nav-btn > label:hover,
   #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .nav > .nav-btn > label > span {
     display: block;
-    width: 1.3rem;
-    height: 0.5rem;
+    width: 2rem;
+    height: 0.8rem;
     border-top: 2px solid black;
   }
 
@@ -681,6 +732,7 @@ div#sticky-div {
     overflow-y: hidden;
     top: 3rem;
     left: 0px;
+    padding-bottom: 1rem;
   }
 
   #nav-check:checked ~ .nav-links {
@@ -728,6 +780,11 @@ div#sticky-div {
     padding: 4rem 12rem 4rem 12rem;
   }
 
+  section#hero div {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .sidebar > *:nth-child(1) {
     padding-right: 5rem;
   }
@@ -739,6 +796,8 @@ div#sticky-div {
 
   section#hero {
     flex-direction: row;
+    padding-bottom: 60rem;
+    background-image: url('https://images.clickfunnels.com/a7/fbd40452f54209be48e6094da357aa/banner_desktop.png');
   }
 
   section#hero > *:nth-child(1) {
@@ -760,5 +819,10 @@ div#sticky-div {
     .logo {
       width: 15rem;
     }
+  }
+
+  .article img {
+    width: 500px;
+    margin: auto;
   }
 }
